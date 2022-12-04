@@ -1,7 +1,6 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
-import FetchData from "../examples/fetchData";
 
 export default function Home() {
   return (
@@ -12,8 +11,9 @@ export default function Home() {
             src="../assets/images/main.jpeg"
             alt="eggs"
             className="hero-img"
-            placeholder="tracedSVG"
+            placeholder="blurred"
             layout="fullWidth"
+            as={"div"}
           />
           <div className="hero-container">
             <div className="hero-text">
@@ -22,7 +22,6 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <FetchData />
       </main>
     </Layout>
   );

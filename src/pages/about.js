@@ -27,6 +27,7 @@ const About = () => {
             alt="person pouring salt in bowl"
             className="about-img"
             placeholder="blurred"
+            as={"div"}
           />
         </section>
       </main>

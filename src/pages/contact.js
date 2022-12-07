@@ -1,7 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout";
+import RecipesList from "../components/RecipesList";
+import { graphql } from "gatsby";
 
-const Contact = () => {
+const Contact = ({
+  data: {
+    allContentfulGatsbyTutorial: { nodes: recipes },
+  },
+}) => {
   return (
     <Layout>
       <main className="page">
@@ -42,9 +48,32 @@ const Contact = () => {
             </form>
           </article>
         </section>
+        <section className="featured-recipes">
+          <h5>Look at this awesome sauce</h5>
+          <RecipesList recipes={recipes} />
+        </section>
       </main>
     </Layout>
   );
 };
+
+export const query = graphql`
+  query {
+    allContentfulGatsbyTutorial(
+      sort: { title: ASC }
+      filter: { featured: { eq: true } }
+    ) {
+      nodes {
+        cookTime
+        prepTime
+        id
+        title
+        image {
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        }
+      }
+    }
+  }
+`;
 
 export default Contact;

@@ -19,7 +19,7 @@ const About = ({
           <article>
             <h2>I'm baby whatever gluten-free DSA,</h2>
             <p>
-              Lumbersexual flexitarian gluten-free, yr put a bird on it vice
+              Lumbersexual flexitarian glutiien-free, yr put a bird on it vice
               succulents selfies tumblr truffaut praxis.
             </p>
             <p>
